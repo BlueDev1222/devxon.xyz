@@ -1,1 +1,1186 @@
-devxon.xyz
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================
+         BASIC WEBSITE INFO
+    ========================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DEVXON | Streamer</title>
+
+    <meta
+        name="description"
+        content="The official DEVXON website."
+    >
+
+
+    <!-- =========================
+         BROWSER TAB ICON
+    ========================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="DEVXON Logo.png"
+    >
+
+    <link
+        rel="shortcut icon"
+        type="image/png"
+        href="DEVXON Logo.png"
+    >
+
+
+    <!-- =========================
+         WEBSITE CSS
+    ========================== -->
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #08080d;
+
+            color: #ffffff;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           BACKGROUND
+        ========================== */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: -1;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(145, 70, 255, 0.25),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 0% 100%,
+                    rgba(80, 0, 180, 0.15),
+                    transparent 30%
+                ),
+                #08080d;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            padding: 0 6%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            z-index: 100;
+
+            background:
+                rgba(8, 8, 13, 0.80);
+
+            backdrop-filter: blur(15px);
+
+            -webkit-backdrop-filter: blur(15px);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.07);
+        }
+
+
+        .nav-brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #ffffff;
+
+            text-decoration: none;
+        }
+
+
+        .nav-brand img {
+            width: 42px;
+
+            height: 42px;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+        }
+
+
+        .nav-brand span {
+            font-size: 21px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            gap: 30px;
+        }
+
+
+        .nav-links a {
+            color: #aaaaaa;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.2s ease;
+        }
+
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 130px 20px 80px;
+        }
+
+
+        .hero-content {
+            width: 100%;
+
+            max-width: 850px;
+        }
+
+
+        .profile-logo {
+            width: 155px;
+
+            height: 155px;
+
+            object-fit: cover;
+
+            border-radius: 30px;
+
+            margin-bottom: 30px;
+
+            box-shadow:
+                0 0 50px
+                rgba(145, 70, 255, 0.35),
+
+                0 20px 50px
+                rgba(0, 0, 0, 0.45);
+
+            transition:
+                transform 0.3s ease;
+        }
+
+
+        .profile-logo:hover {
+            transform: scale(1.05);
+        }
+
+
+        .status {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(255, 255, 255, 0.05);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.08);
+
+            color: #bbbbbb;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .status-dot {
+            width: 8px;
+
+            height: 8px;
+
+            background: #777777;
+
+            border-radius: 50%;
+        }
+
+
+        .hero h1 {
+            font-size:
+                clamp(55px, 10vw, 105px);
+
+            font-weight: 900;
+
+            letter-spacing: -5px;
+
+            line-height: 0.95;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 span {
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #b55cff
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .hero p {
+            max-width: 620px;
+
+            margin: 0 auto;
+
+            color: #999999;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================== */
+
+        .hero-buttons {
+            margin-top: 35px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+        }
+
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 50px;
+
+            padding: 14px 27px;
+
+            border-radius: 11px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        .primary {
+            color: #ffffff;
+
+            background: #9146ff;
+
+            box-shadow:
+                0 10px 30px
+                rgba(145, 70, 255, 0.25);
+        }
+
+
+        .primary:hover {
+            transform: translateY(-3px);
+
+            background: #a55cff;
+
+            box-shadow:
+                0 15px 35px
+                rgba(145, 70, 255, 0.35);
+        }
+
+
+        .secondary {
+            color: #ffffff;
+
+            background:
+                rgba(255, 255, 255, 0.06);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.1);
+        }
+
+
+        .secondary:hover {
+            transform: translateY(-3px);
+
+            background:
+                rgba(255, 255, 255, 0.11);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================== */
+
+        section {
+            padding: 100px 6%;
+        }
+
+
+        .container {
+            width: 100%;
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .section-title h2 {
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .section-title p {
+            color: #888888;
+        }
+
+
+        /* =========================
+           SOCIAL CARDS
+        ========================== */
+
+        .social-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .social-card {
+            padding: 30px 20px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            background:
+                rgba(255, 255, 255, 0.035);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.08);
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        .social-card:hover {
+            transform: translateY(-8px);
+
+            background:
+                rgba(168, 85, 247, 0.08);
+
+            border-color:
+                rgba(168, 85, 247, 0.45);
+        }
+
+
+        .social-logo {
+            width: 90px;
+
+            height: 90px;
+
+            object-fit: contain;
+
+            margin: 0 auto 20px;
+
+            border-radius: 14px;
+
+            transition:
+                transform 0.25s ease;
+        }
+
+
+        .social-card:hover .social-logo {
+            transform: scale(1.08);
+        }
+
+
+        .social-card h3 {
+            font-size: 19px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .social-card p {
+            color: #888888;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           TWITCH FEATURE
+        ========================== */
+
+        .twitch-box {
+            padding: 60px 30px;
+
+            text-align: center;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(145, 70, 255, 0.15),
+                    rgba(255, 255, 255, 0.025)
+                );
+
+            border:
+                1px solid
+                rgba(145, 70, 255, 0.25);
+        }
+
+
+        .twitch-logo {
+            width: 90px;
+
+            height: 75px;
+
+            object-fit: contain;
+
+            margin-bottom: 20px;
+        }
+
+
+        .twitch-box h2 {
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .twitch-box p {
+            color: #999999;
+
+            margin-bottom: 28px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            max-width: 750px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+
+        .about p {
+            color: #aaaaaa;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 30px 20px;
+
+            text-align: center;
+
+            color: #666666;
+
+            font-size: 13px;
+
+            border-top:
+                1px solid
+                rgba(255, 255, 255, 0.06);
+        }
+
+
+        footer strong {
+            color: #aaaaaa;
+        }
+
+
+        footer a {
+            color: #a855f7;
+
+            text-decoration: none;
+
+            transition:
+                color 0.2s ease;
+        }
+
+
+        footer a:hover {
+            color: #c084fc;
+
+            text-decoration: underline;
+        }
+
+
+        .footer-divider {
+            color: #444444;
+
+            margin:
+                0 8px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .social-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            nav {
+                justify-content: center;
+            }
+
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .profile-logo {
+                width: 120px;
+
+                height: 120px;
+
+                border-radius: 24px;
+            }
+
+
+            .hero h1 {
+                font-size: 58px;
+
+                letter-spacing: -3px;
+            }
+
+
+            .hero p {
+                font-size: 16px;
+            }
+
+
+            .hero-buttons {
+                flex-direction: column;
+
+                width: 100%;
+            }
+
+
+            .button {
+                width: 100%;
+            }
+
+
+            section {
+                padding: 75px 20px;
+            }
+
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .social-logo {
+                width: 80px;
+
+                height: 80px;
+            }
+
+
+            .twitch-box {
+                padding: 45px 20px;
+            }
+
+
+            .twitch-box h2 {
+                font-size: 30px;
+            }
+
+
+            footer {
+                line-height: 2;
+            }
+
+
+            .footer-divider {
+                margin:
+                    0 5px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL PHONES
+        ========================== */
+
+        @media (max-width: 380px) {
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+
+            .profile-logo {
+                width: 105px;
+
+                height: 105px;
+            }
+
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     NAVIGATION
+================================== -->
+
+<nav>
+
+    <a
+        class="nav-brand"
+        href="#home"
+    >
+
+        <img
+            src="DEVXON Logo.png"
+            alt="DEVXON Logo"
+        >
+
+        <span>
+            DEVXON
+        </span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#socials">
+            Socials
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =================================
+     HERO
+================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-content">
+
+
+        <img
+            class="profile-logo"
+            src="DEVXON Logo.png"
+            alt="DEVXON Logo"
+        >
+
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            Streamer & Content Creator
+
+        </div>
+
+
+        <h1>
+
+            <span>
+                DEVXON
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Welcome to the official DEVXON website.
+            Watch streams, join the community, and follow
+            DEVXON across social media.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+
+            <a
+                class="button primary"
+                href="https://www.twitch.tv/devxon5"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Watch on Twitch
+
+            </a>
+
+
+            <a
+                class="button secondary"
+                href="#socials"
+            >
+
+                Find Me Online
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     SOCIALS
+================================== -->
+
+<section id="socials">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Find Me Online
+            </h2>
+
+            <p>
+                Follow DEVXON across all platforms.
+            </p>
+
+        </div>
+
+
+        <div class="social-grid">
+
+
+            <!-- =====================
+                 DISCORD
+            ====================== -->
+
+            <a
+                class="social-card"
+                href="https://discord.gg/RZvsZwpeb7"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <img
+                    class="social-logo"
+                    src="Discord Logo.png"
+                    alt="Discord Logo"
+                >
+
+                <h3>
+                    Discord
+                </h3>
+
+                <p>
+                    Join the community
+                </p>
+
+            </a>
+
+
+            <!-- =====================
+                 TWITCH
+            ====================== -->
+
+            <a
+                class="social-card"
+                href="https://www.twitch.tv/devxon5"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <img
+                    class="social-logo"
+                    src="Twitch Logo.png"
+                    alt="Twitch Logo"
+                >
+
+                <h3>
+                    Twitch
+                </h3>
+
+                <p>
+                    Watch the streams
+                </p>
+
+            </a>
+
+
+            <!-- =====================
+                 TIKTOK
+            ====================== -->
+
+            <a
+                class="social-card"
+                href="https://www.tiktok.com/@thegoodman106"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <img
+                    class="social-logo"
+                    src="Tiktok Logo.png"
+                    alt="TikTok Logo"
+                >
+
+                <h3>
+                    TikTok
+                </h3>
+
+                <p>
+                    Watch short videos
+                </p>
+
+            </a>
+
+
+            <!-- =====================
+                 X
+            ====================== -->
+
+            <a
+                class="social-card"
+                href="https://x.com/DevXon5"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <img
+                    class="social-logo"
+                    src="X logo.png"
+                    alt="X Logo"
+                >
+
+                <h3>
+                    X
+                </h3>
+
+                <p>
+                    Follow for updates
+                </p>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     TWITCH FEATURE
+================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="twitch-box">
+
+
+            <img
+                class="twitch-logo"
+                src="Twitch Logo.png"
+                alt="Twitch Logo"
+            >
+
+
+            <h2>
+                Watch DEVXON Live
+            </h2>
+
+
+            <p>
+                Catch the latest streams and hang out
+                with the community.
+            </p>
+
+
+            <a
+                class="button primary"
+                href="https://www.twitch.tv/devxon5"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Visit Twitch Channel
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     ABOUT
+================================== -->
+
+<section id="about">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                About DEVXON
+            </h2>
+
+        </div>
+
+
+        <div class="about">
+
+            <p>
+
+                DEVXON is a streamer and content creator.
+                Follow the social links above to stay connected,
+                watch streams, and join the community.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     FOOTER
+================================== -->
+
+<footer>
+
+    <p>
+
+        © 2026
+        <strong>DEVXON</strong>.
+        All rights reserved.
+
+        <span class="footer-divider">
+            |
+        </span>
+
+        Made By:
+
+        <a
+            href="https://x.com/DevXon5"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <strong>DEVXON</strong>
+
+        </a>
+
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
